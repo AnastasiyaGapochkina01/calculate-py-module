@@ -12,6 +12,15 @@ pipeline {
   }
 
   stages {
+    stage('Prepare host') {
+      steps {
+        script {
+          sh """
+            sudo apt install python3.12-venv -y
+          """
+        }
+      }
+    }
     stage('Clone repo') {
       steps {
         script {
