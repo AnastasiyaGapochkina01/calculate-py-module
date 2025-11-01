@@ -16,7 +16,7 @@ pipeline {
       steps {
         script {
           sh """
-            sudo apt install python3.12-venv -y
+            sudo apt install python3.12-venv -y > /dev/null
           """
         }
       }
