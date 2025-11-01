@@ -23,7 +23,7 @@ pipeline {
             else
               echo "Repo absent. Clonning..."
               mkdir -p ${env.BASE_DIR}
-              git clone ${env.GIT_URL} ${env.BASE_DIR}/${env.PRJ_DIR}
+              git clone ${env.GIT_URL} ${env.BASE_DIR}/${env.PRJ_NAME}
             fi
           """
         }
